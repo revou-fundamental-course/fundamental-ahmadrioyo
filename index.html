@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="home" class="header-wrapper">
+        <img class="logo" src="https://cdn.prod.website-files.com/61af164800e38c4f53c60b4e/61af164800e38c11efc60b6d_RevoU.svg" alt="" width="48x">
+        <div class="menu">
+            <button><a style="text-decoration: none;" href="#home">Home</a></button>
+            <button><a style="text-decoration: none;" href="#our">Our Profile</a></button>
+            <button><a style="text-decoration: none;" href="#porto">Portofolio</a></button>
+            <button><a style="text-decoration: none;" href="#message">Messages Us</a></button>
+        </div>
+    </header>
+    <nav id="our">
+        <h1>Hi Rio, Welcome to website</h1>
+        <p>ini adalah website latihan pertama</p>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="https://www.shadowood.com/pixabay21.jpg" style="width:100%">
+                <div class="text">Caption Text</div>
+            </div>
+        
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="https://shadowood.com/pixabay13.jpg" style="width:100%">
+                <div class="text">Caption Two</div>
+            </div>
+        
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="https://www.shadowood.com/pixabay47.jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+            </div>
+        
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </nav>
+    <main>
+        <section id="porto">
+            <h2>Our Headquarter</h2>
+            <div style="display: flex; flex-direction:row; justify-content:space-between;">
+                <div>
+                    <img src="https://cdn.prod.website-files.com/61af164800e38c4f53c60b4e/61af164800e38c11efc60b6d_RevoU.svg" style="width: 100%;" alt="">
+                    <p>Jakarta</p>
+                </div>
+                <div>
+                    <img src="https://cdn.prod.website-files.com/61af164800e38c4f53c60b4e/61af164800e38c11efc60b6d_RevoU.svg" style="width: 100%;" alt="">
+                    <p>Bandung</p>
+                </div>
+                <div>
+                    <img src="https://cdn.prod.website-files.com/61af164800e38c4f53c60b4e/61af164800e38c11efc60b6d_RevoU.svg" style="width: 100%;" alt="">
+                    <p>Surabaya</p>
+                </div>
+            </div>
+        </section>
+        <section id="message" >
+            <h2>Messages Us</h2>
+            <div style="display: flex; flex-direction:row">
+                <div>
+                    <form name="message-form" onsubmit="return validateForm()">
+                        Nama :
+                        <input type="text" placeholder="Nama" id="name-input" name="name-input">
+                        <br>
+                
+                        Tanggal lahir :
+                        <input type="date" placeholder="birth-date">
+                        <br>
+                
+                        jenis kelamin :
+                        <div style="display: flex; flex-direction:row;">
+                            <input type="radio" id="male" name="gender" value="male">
+                            <input type="radio" id="female" name="gender" value="female">
+                        </div>
+                
+                        Pesan :
+                        <textarea placeholder="Pesan" name="messages" id=""></textarea>
+                        <br>
+                
+                        <button id="submit" type="submit">Kirim</button>
+                        <p id="error-name"></p>
+                     </form>
+                </div>
+                <div>
+                        <p>Nama :<span id="sender-full-name"></span></p>
+                        <p>Tanggal lahir :<span id="sender-birth-date"></span></p>
+                        <p>Jenis Kelamin :<span id="sender-gender"></span></p>
+                        <p>Pesan :<span id="sender-messages"></span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
